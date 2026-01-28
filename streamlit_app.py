@@ -2,12 +2,14 @@
 # Import python packages
 import streamlit as st
 from snowflake.snowpark.functions import col
-from snowflake.snowpark.context import get_active_session
+
 from datetime import datetime
 
 current_datetime = str(datetime.now())
 order_filled = str('FALSE')
 
+cnx = st.connection("snowflake")
+session = cnx.session()
 counter = 0
 
 # Increment by 1 using the += operator
