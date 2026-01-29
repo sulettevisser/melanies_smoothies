@@ -8,7 +8,7 @@ from datetime import datetime
 current_datetime = str(datetime.now())
 order_filled = str('FALSE')
 
-cnx = st.connection("Snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 counter = 0
 
